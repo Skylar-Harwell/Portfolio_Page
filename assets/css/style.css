@@ -3,67 +3,54 @@
     padding: 0;
 }
 body, html {
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #daedfb;
+    background-color: #9377a7;
 }
-nav {
-    display: inline;
-    justify-content: space-between;
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    background: url(../images/crumpled_paper.jpg);
+    background-size: auto;
+    font-weight: 500;
+    padding: 25px 0 25px 20px;
+    border-bottom: 2px solid black;
+}
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+header h2 {
+    text-align: end;
+    padding: 0 10px 0 0;
+}
+header nav {
     float: right;  
     padding: 10px 10px 0 10px;
     color: black;
     font-weight: 700;
 }
-header {
-    text-align: right;
-    width: 100%;
-    height: 70px;
-    background: url(../images/crumpled_paper.jpg);
-    background-size: auto;
-    text-align: center;
-    font-weight: 500;
-    padding: 75px 0 25px 0;
-    border-bottom: 2px solid black;
+header nav ul {
+    list-style-type: none;
 }
-header p {
-    font-size: 16pt;
-}
-
-img {
-    display: block;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
+header nav ul li {
+    display: inline;
+    justify-content: space-between;
+    margin-left: 25px;
 }
 figcaption {
     font-size: 8pt;
+    color: #fff;
+    font-style: italic;
+    padding: 2px;
     text-align: center;
 }
-.links {
-    display: inline;
-    margin: 0 20px 0 0;
-}
-section {
-    text-align: center;
-}
-#title {
-    margin-top: 5px;
-    text-align: center;
-    width:100%;
-    height: 40px;
-}
-}
-#contact {
-    height: 55px;
-    width: 100%;
-    background-color: #87bfff;
-    border-top: 5px solid #2667ff;
-    border-bottom: 5px solid #2667ff;
-}
+
 footer {
+    display: inline;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -72,9 +59,75 @@ ul {
     list-style: none;
     padding: 5px 0;
 }
-main p {
-    margin: 50px;
+aside {
+    background-color: #9377a7;
+    padding: 80px;
+    text-align: left;  
+    font-size: 48px;
+    color: #fff;
 }
-h4 {
-    margin-bottom: 5px;
+.hero {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/purple_bubble.jpg");
+    background-size: cover;
+    background-position: center;
 }
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.contact {
+    display: inline;
+    justify-content: right;
+    margin-left: 25px;
+    color: #fff;
+}
+#header {
+    justify-content: left;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+.article {
+    padding: 50px;
+    color: #fff;
+}
+.links {
+    display: inline;
+    margin: 0 20px 0 0;
+}
+.imgBox {
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    object-fit: cover;
+    float: right;
+}
+.imgBoxes {
+    flex: 4;
+    background-color: #422e50;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start; 
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+  }
