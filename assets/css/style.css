@@ -1,76 +1,91 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body, html {
-    display: flex;
-    flex-direction: column;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #9377a7;
 }
 main {
     display: flex;
     flex-wrap: wrap;
+    padding: 50px;
 }
 header {
-    background: url(../images/crumpled_paper.jpg);
+    background-color: #2f0055;
     background-size: auto;
     font-weight: 500;
     padding: 25px 0 25px 20px;
     border-bottom: 2px solid black;
 }
 header h1 {
-    display: inline-block;
-    font-size: 48px;
-}
-header h2 {
-    text-align: end;
-    padding: 0 10px 0 0;
-}
-header nav {
-    float: right;  
-    padding: 10px 10px 0 10px;
-    color: black;
-    font-weight: 700;
-}
-header nav ul {
-    list-style-type: none;
-}
-header nav ul li {
     display: inline;
     justify-content: space-between;
-    margin-left: 25px;
+    font-size: 52px;
+    color: #ffffff;
+    padding: 20px 0 0 30px;
 }
-figcaption {
-    font-size: 8pt;
-    color: #fff;
-    font-style: italic;
-    padding: 2px;
-    text-align: center;
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4b0387;
+    background-size: cover;
+    color: #000000;
+    font-weight: 700;
+    padding-bottom: 20px;
 }
-
+nav ul {
+    list-style-type: none;
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 25px;
+    padding-right: 20px;
+}
+nav ul li {
+    display: inline;
+    justify-content: space-between;
+    margin: 25px 0 0 25px;
+    color: #ffffff;
+}
+nav ul li a {
+    color: #ffffff;
+}    
+img {
+    background-image;: linear-gradient(#bd6cff72, #33026b87)
+}
 footer {
     display: inline;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
+    padding-top: 10px;
 }
 ul {
     list-style: none;
     padding: 5px 0;
 }
 aside {
+    flex: 1;
+    justify-self: left;
     background-color: #9377a7;
-    padding: 80px;
+    padding: 50px;
     text-align: left;  
     font-size: 48px;
     color: #fff;
+}
+aside p{
+    background-color: #9377a7;
+    color: #fff;
+    font-size: 20px;
+    text-align: left; 
+    padding-top: 50px;
 }
 .hero {
     height: 600px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("../images/purple_bubble.jpg");
+    background-image:linear-gradient(#bd6cff72, #33026b87), url("../images/purple_bubble.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -82,21 +97,34 @@ aside {
     transform: translate(-50%, -50%);
     color: white;
 }
+.contactme {
+    text-align: right;
+    font-size: 32px;
+    color: #ffffff;
+    padding-right: 80px;
+    padding-top: 50px;
+}
 .contact {
     display: inline;
-    justify-content: right;
     margin-left: 25px;
-    color: #fff;
+    font-size: 20px;
 }
 #header {
-    justify-content: left;
     font-size: 32px;
     text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5px;
+    padding-bottom: 50px;
+}
+#projects {
+    text-decoration: underline;
+    text-shadow: #45017c;
 }
 
-.article {
+.aboutme {
     padding: 50px;
     color: #fff;
+    text-align: left;
 }
 .links {
     display: inline;
@@ -105,18 +133,19 @@ aside {
 .imgBox {
     margin: 10px;
     padding: 30px;
-    text-align: center;
-    object-fit: cover;
-    float: right;
 }
-.imgBoxes {
-    flex: 4;
-    background-color: #422e50;
-    padding: 50px;
+.container {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start; 
+    justify-content: center;
+    background-color: #391a505b;
+    border: 10px #000000;
+    border-style: double;
+    border-radius: 20px;
+}
+.container::before {
+
 }
 
 
@@ -126,8 +155,13 @@ aside {
 
 
 @media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: column;
+    .container {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-  }
+@media screen and (min-width 992px) {  
+    .container {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+
