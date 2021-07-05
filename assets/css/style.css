@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 body, html {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,7 +22,7 @@ header {
 header h1 {
     display: inline-block;
     justify-content: space-between;
-    font-size: 52px;
+    font-size: 48px;
     color: #ffffff;
     padding: 20px 0 0 30px;
 }
@@ -37,7 +37,7 @@ nav {
 }
 nav ul {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 16px;
     color: #ffffff;
     margin-top: 25px;
     padding-right: 20px;
@@ -52,54 +52,71 @@ li a {
     color: #ffffff;
 }    
 img {
-    background-image; linear-gradient(#000000, #33026b87)
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
 }
 footer {
     display: inline;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
-    padding-top: 10px;
+    padding: 25px;
+    margin: 5px;
+    font-size: 20px;
 }
 ul {
     list-style: none;
     padding: 5px 0;
 }
 aside {
-    flex: 1;
-    justify-self: left;
-    background-color: #9377a7;
-    padding: 80px;
+    float: left;
+    background-color: #46275c;
     text-align: left;  
-    font-size: 48px;
-    color: #fff;
+    text-align: center;
+    margin-top: 150px;
+    margin-right: 20px;
+    padding: 25px 25px 25px 25px;
+    clear: both;
+    width: 150px;
+    height: 100%;
+    border: solid 10px #57008a;
+    border-radius: 25px;
+
 }
 aside p{
-    background-color: #9377a7;
+    background-color: #46275c;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left; 
-    padding-top: 50px;
+    padding-top: 20px 15px;
+}
+aside h3 {
+    color: #fff;
+    font-style: italic;
+    font-size: 24px;
+    padding-bottom: 25px;
 }
 .hero {
     height: 600px;
     width: 100%;
     margin-bottom: 25px;
-    background-image:linear-gradient(#bd6cff72, #33026b87), url("../images/purple_bubble.jpg");
+    background-image:linear-gradient(#00000072, #00000087), url("../images/purple_bubble.jpg");
     background-size: cover;
     background-position: center;
+    border-bottom: 30px solid #5900a2cd;
 }
 .hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -150%);
     color: white;
 }
 .contactme {
     text-align: right;
-    font-size: 32px;
+    font-size: 20px;
     color: #ffffff;
     padding-right: 80px;
     padding-top: 50px;
@@ -110,7 +127,7 @@ aside p{
     font-size: 20px;
 }
 #header {
-    font-size: 32px;
+    font-size: 30px;
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: 5px;
@@ -130,30 +147,88 @@ aside p{
     display: inline;
     margin: 0 20px 0 0;
 }
-.imgBox {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: stretch;
+.container {
+    background-color: #391a505b;
+    border: 5px #000000;
+    border-style: double;
+    border-radius: 20px;
     margin: 5px;
     padding: 5px;
 }
-.container {
+.imgsizebig {
+    width: 600px;
+    object-fit: contain;
+}
+.imgsizereg {
+    width: 290px;
+    object-fit: fill;
+}
+.bacon {
     display: flex;
     flex-wrap: wrap;
-    background-color: #391a505b;
-    border: 3px #000000;
-    border-style: double;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
+    flex-direction: row;
+    max-width: auto;
+}
+.imgsizebig:hover, 
+.imgsizebig:hover {
+    box-shadow: inset 0px 0px 16px rgba(232, 102, 236, 1), 0 0 30px rgba(232, 102, 236, 1);
+}
+.imgsizereg:hover, 
+.imgsizereg:hover {
+    box-shadow: inset 0px 0px 16px rgba(232, 102, 236, 1), 0 0 30px rgba(232, 102, 236, 1);
 }
 
 
+@media screen and (max-width: 768px) {
+    .bacon {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    main,
+    nav {
+    flex-direction: column;
+    }
+    
 
+@media screen and (min-width 992px) {
+    .bacon {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    main,
+    nav {
+    flex-direction: column;
+  }
 
+@media screen and (min-width 611px) {
+    .hero-text {
+        top: 10%;
+    }
+}
 
+//*
+.width1 {
+    max-width: ;
+    margin: auto;
+    border: 5px solid #000000;
+}
+.width2 {
+    max-width: 200px;
+    margin: auto;
+    border: 5px solid #000000;
+}
+.imgsizereg::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
+}
+
+.imgsizebig:hover {
+  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
 
 
 
