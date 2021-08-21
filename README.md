@@ -16,4 +16,4 @@ GitHub Site Page: https://skylar-harwell.github.io/Portfolio_Page/
 GitHub Repository: https://github.com/Skylar-Harwell/Portfolio_Page
 
 ![Screenshot1](Assets/images/Portfolio_1.png?)
-![Screenshot1](Assets/images/Portfolio_2.png?)
+![Screenshot2](Assets/images/Portfolio_2.png?)
